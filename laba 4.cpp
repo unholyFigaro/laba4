@@ -1,4 +1,4 @@
-﻿// laba 4.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+// laba 4.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
@@ -13,9 +13,9 @@ int main()
     autoClass classOfAuto = A;
     truckType type = Lorry;
     int trailerId = 77777;
-    int carSpeed = 108;
-    Speed speed(autoModel, carMileage, classOfAuto, trailerId, type, carSpeed);
-    speed.showInformaiton();
+    int count = 108;
+    AutoPark autoPark(autoModel, carMileage, classOfAuto, trailerId, type, count);
+    autoPark.showInformaiton();
     cout << endl;
     cout << endl;
     std::cout << "Hello World!\n";
