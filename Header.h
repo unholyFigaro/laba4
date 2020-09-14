@@ -166,21 +166,21 @@ public:
 	}
 };
 
-class Speed : virtual public Truck, virtual public PassengerCar {
+class AutoPark : virtual public Truck, virtual public PassengerCar {
 protected:
-	int speed;
+	int count;
 public:
-	Speed()
+	AutoPark()
 	{
-		this->speed = 90;
+		this->count = 90;
 	}
-	Speed(string autoModel, int carMileage, autoClass classOfAuto, int trailerId, truckType type, int speed) {
+	AutoPark(string autoModel, int carMileage, autoClass classOfAuto, int trailerId, truckType type, int speed) {
 		this->autoModel = autoModel;
 		this->trailerId = trailerId;
 		this->type = type;
 		this->carMileage = carMileage;
 		this->classOfAuto = classOfAuto;
-		this->speed = speed;
+		this->count = speed;
 	}
 	void showInformaiton(){
 		cout << "Model of this auto is " << autoModel << endl;
@@ -198,8 +198,9 @@ public:
 		if (classOfAuto == 3) cout << "D";
 		if (classOfAuto == 4) cout << "S";
 		cout << " class" << endl;
+		cout << "Total amount of cars : " << count<< endl;
 	}
-	~Speed(){
+	~AutoPark(){
 
 	}
 };
