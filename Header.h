@@ -27,9 +27,9 @@ public:
 	Auto()
 	{
 		int chance;
-		chance=rand()%3;
+		chance = rand() % 3;
 		this->autoModel = "Car3001";
-		if(chance==0)
+		if (chance == 0)
 			this->autoModel = "Audi";
 		if (chance == 1)
 			this->autoModel = "BMW";
@@ -42,7 +42,7 @@ public:
 	}
 	virtual void showInformaiton()
 	{
-		cout <<"Model of this auto is " <<autoModel << endl;
+		cout << "Model of this auto is " << autoModel << endl;
 	}
 	~Auto()
 	{
@@ -102,7 +102,7 @@ public:
 	}
 };
 
-class PassengerCar: virtual public WithoutTrailer{
+class PassengerCar : virtual public WithoutTrailer {
 protected:
 	autoClass classOfAuto;
 public:
@@ -126,7 +126,7 @@ public:
 		if (classOfAuto == 2) cout << "C";
 		if (classOfAuto == 3) cout << "D";
 		if (classOfAuto == 4) cout << "S";
-		cout<<" class"<<endl;
+		cout << " class" << endl;
 	}
 	~PassengerCar()
 	{
@@ -142,7 +142,7 @@ public:
 	{
 		this->trailerId = ClassicTruck;
 	}
-	Truck (string autoModel, int trailerId, truckType type)
+	Truck(string autoModel, int trailerId, truckType type)
 	{
 		this->autoModel = autoModel;
 		this->trailerId = trailerId;
@@ -182,7 +182,7 @@ public:
 		this->classOfAuto = classOfAuto;
 		this->count = speed;
 	}
-	void showInformaiton(){
+	void showInformaiton() {
 		cout << "Model of this auto is " << autoModel << endl;
 		cout << "Trailer ID is " << trailerId << endl;
 		cout << "It`s ";
@@ -198,9 +198,9 @@ public:
 		if (classOfAuto == 3) cout << "D";
 		if (classOfAuto == 4) cout << "S";
 		cout << " class" << endl;
-		cout << "Total amount of cars : " << count<< endl;
+		cout << "Total amount of cars : " << count << endl;
 	}
-	~AutoPark(){
+	~AutoPark() {
 
 	}
 };
